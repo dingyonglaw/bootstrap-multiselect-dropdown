@@ -342,7 +342,7 @@ textarea[readonly] {
 // Allow us to put symbols and text within the input field for a cleaner look
 .input-prepend,
 .input-append {
-  input {
+  input, ul.checkbox-select li.menu {
     .border-radius(0 3px 3px 0);
   }
   .add-on {
@@ -431,6 +431,8 @@ textarea[readonly] {
   }
 }
 
+
+
 ul.checkbox-select {
 
   label {
@@ -443,6 +445,7 @@ ul.checkbox-select {
     padding: 4px;
     color: @gray;
     text-align: center;
+    line-height: 18px;
     &:hover {
       color: @grayDark;
       text-decoration: none;
@@ -465,7 +468,7 @@ ul.checkbox-select {
   // first one for backwards compatibility
   .menu-dropdown,
   .dropdown-menu {
-    top: 28px;
+    top: 27px;
     left: -1px;
     width: 100%;
     .border-radius(0 0 3px 3px);
@@ -475,6 +478,7 @@ ul.checkbox-select {
     border-top: 1px solid transparent;
     padding: 3px 0;
     max-width: none;
+    min-width: 0px;
     
     > li {
       &:hover {
