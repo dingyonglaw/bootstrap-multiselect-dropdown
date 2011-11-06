@@ -431,6 +431,77 @@ textarea[readonly] {
   }
 }
 
+ul.checkbox-select {
+
+  label {
+    padding: 2px 5px;
+    line-height: 19px;
+    color: @gray;
+  }
+
+  a.menu {
+    padding: 4px;
+    color: @gray;
+    text-align: center;
+    &:hover {
+      color: @grayDark;
+      text-decoration: none;
+    }
+  }
+
+  li.menu {
+    width: 100%;
+    border: 1px solid #CCC;
+    background: @grayLighter;
+    .border-radius(3px);
+  }
+
+  li.menu.open {
+    .border-radius(3px 3px 0 0);
+    border-bottom: 1px solid transparent;
+    background-color: @white;
+  }
+
+  // first one for backwards compatibility
+  .menu-dropdown,
+  .dropdown-menu {
+    top: 28px;
+    left: -1px;
+    width: 100%;
+    .border-radius(0 0 3px 3px);
+    background-color: @white;
+    padding: 0;
+    border: 1px #CCC solid;
+    border-top: 1px solid transparent;
+    padding: 3px 0;
+    max-width: none;
+    
+    > li {
+      &:hover {
+        color: @grayDark;
+        background-color: @grayLighter;
+        #gradient > .vertical(#eeeeee, #dddddd);
+      }
+    }
+  }
+  // first one for backwards compatibility
+  a.menu:after,
+  .dropdown-toggle:after {
+    border-top-color: #999;
+    margin-left: 5px;
+  }
+  // first one for backwards compatibility
+  li.open.menu .menu,
+  .open.dropdown .dropdown-toggle {
+    border-color: #999;
+  }
+  // first one for backwards compatibility
+  li.open a.menu:after,
+  .dropdown.open .dropdown-toggle:after {
+    border-top-color: #333;
+  }
+}
+
 // Stacked forms
 .form-stacked {
   padding-left: 20px;

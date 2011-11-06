@@ -35,6 +35,9 @@
         !isActive && li.toggleClass('open')
         return false
       })
+      .delegate('[data-checkbox-dropdown] li', 'click', function (e) {
+        e.stopPropagation();
+      })
     })
   }
 
